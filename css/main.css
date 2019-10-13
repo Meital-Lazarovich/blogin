@@ -1,0 +1,378 @@
+* {
+    box-sizing: border-box;
+}
+
+/*---fonts---*/
+
+@font-face {
+    font-family: lato;
+    src: url('../fonts/lato/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: lato-bold;
+    src: url('../fonts/lato/Lato-Bold.ttf');
+}
+
+@font-face {
+    font-family: eurof;
+    src: url('../fonts/eurofurence/eurof55.ttf');
+}
+
+/*---Base---*/
+
+html {
+    font-family: lato, sans-serif;
+    color: #606060;
+    line-height: 20px;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*---Layout---*/
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+/*---header---*/
+
+header {
+    background-color: #292929;
+}
+
+.logo {
+    font-family: eurof, sans-serif;
+    color: white;
+    font-size: 2.5rem;
+    letter-spacing: -0.8px;
+}
+
+header .logo:hover {
+    cursor: pointer;
+}
+
+.logo-dot {
+    color: #58c93a;
+}
+
+.main-nav-btn {
+    display: none;
+}
+
+.main-nav {
+    box-shadow: inset -1px 0 0 0 #1d1d1d;
+}
+
+.main-nav-item {
+    width: 132px;
+    height: 130px;
+    box-shadow: -1px 0 0 #1d1d1d;
+    letter-spacing: 0.8px;
+    color: white;
+    font-family: lato-bold;
+    transition: color .3s, box-shadow .3s;
+    cursor: pointer;
+}
+
+.main-nav-item:hover, .active {
+    box-shadow: -1px 0 0 #1d1d1d, inset 0 -6px 0 #58c93a;
+    color: #58c93a;
+}
+
+/*---Main---*/
+
+main {
+    border: 1px solid #e1e0e0;
+    border-bottom: 0;
+    padding-top: 5rem;
+}
+
+/*---card---*/
+
+.cards {
+    border-bottom: 1px solid #e1e0e0;
+}
+
+.card {
+    padding: 0;
+    margin-bottom: 5rem;
+}
+
+.card-content {
+    margin-left: 2.5rem;
+    margin-right: 1.562rem;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-title {
+    text-transform: uppercase;
+    letter-spacing: 0.84px;
+    line-height: 30px;
+    margin: 0;
+}
+
+.card-text p {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.card-text p:last-child {
+    margin-bottom: 0;
+}
+
+.card-btn {
+    border: 2px solid #c2c2c2;
+    background-color: #ffffff;
+    border-radius: 1000px;
+    font-size: 1em;
+    padding: 0.75em 1.5em;
+    color: #c2c1c1;
+    letter-spacing: 0.48px;
+    font-family: lato-bold, sans-serif;
+    line-height: 1.25em;
+    transition: padding .3s;
+}
+
+.card-btn:hover {
+    border: 2px solid #58c93a;
+    color: #58c93a;
+    cursor: pointer;
+    padding-right: 3em;
+}
+
+.card-btn:hover::after {
+    content: '→';
+    position: absolute;
+    padding-right: 1.5em;
+    padding-left: 0.6em;
+}
+
+/*---page nav---*/
+
+.page-nav button {
+    border: 0;
+    background-color: white;
+    height: 4.62rem;
+    cursor: pointer;
+}
+
+.page-nav-text {
+    font-family: lato-bold, sans-serif;
+    font-size: 1.12rem;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    color: #818181;
+}
+
+.page-nav-prev .page-nav-img {
+    margin-left: 1.87rem;
+    margin-right: 0.62rem;
+}
+
+.page-nav-next .page-nav-img {
+    margin-right: 1.87rem;
+    margin-left: 0.62rem;
+}
+
+/*---footer---*/
+
+footer {
+    box-shadow: inset 0 1px 0 #e1e0e0;
+    background-color: #f8f8f8;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+footer .logo {
+    color: #292929;
+    margin-bottom: 2rem;
+}
+
+.credits {
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 2.37rem;
+}
+
+.social-link {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #e5e5e5;
+    margin-right: 1.25rem;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.social-link.facebook:hover {
+    background-color: #516fad;
+}
+
+.social-link.twitter:hover {
+    background-color: #5ab9f3;
+}
+
+.social-link.be:hover {
+    background-color: #a77df1;
+}
+
+.social-link.basketball:hover {
+    background-color: #f7ba60;
+}
+
+/*---helpers---*/
+
+/*---flex helpers---*/
+
+.flex {
+    display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+/*----list helpers-----*/
+
+.clean-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/*---media queries---*/
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 0.875rem;
+        line-height: 18px;
+    }
+
+    header .logo, .card {
+        padding-left: 1rem;
+    }
+
+    .main-nav-item {
+        height: 90px;
+    }
+
+    .card-content {
+        margin-left: 1.5em;
+    }
+
+    .card-image {
+        width: 45%;
+        object-fit: cover;
+    }
+    
+    .card-title {
+        margin-bottom: 1rem;
+        line-height: 25px;
+    }
+
+    .card-text {
+        margin-bottom: 1rem;
+        flex: 1;
+    }
+}
+
+@media (max-width: 740px) {
+    .main-nav-btn {
+        display: block;
+        margin-right: 2rem;
+        border-radius: 8px;
+        border: none;
+        padding: 4px 8px;
+        cursor: pointer;
+        transition: background-color .3s;
+    }
+
+    .main-nav-btn:hover {
+        background-color: #c6c2c1;
+    }
+
+    .open-menu .main-nav-btn {
+        display: none;
+    }
+
+    .main-header {
+        height: 5rem;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: rgba(42, 42, 42, 0.8);
+        border-left: 2px solid rgba(223, 218, 218, 0.6);
+        transform: translate(100%, 0);
+        transition: transform .6s;
+    }
+
+    .main-nav-item {
+        box-shadow: inset 0 -2px 0 0 #1d1d1d;
+    }
+
+    .main-nav-item:hover, .active {
+        box-shadow: inset 0 -2px 0 0 #58c93a;
+    }
+
+    .open-menu .main-nav {
+        transform: translate(0, 0);
+    }
+
+    .screen {
+        position: fixed;
+        width: 100%;
+        height:100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .3s;
+    }
+
+    .open-menu .screen {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card-image {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    .card-content {
+        margin-left: 0;
+    }
+}
+
