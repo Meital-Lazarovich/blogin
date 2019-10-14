@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body onload="init()">
     <header>
         <div class="screen" onclick="toggleMenu()"></div>
         <section class="main-header flex container space-between align-center">
@@ -24,44 +24,7 @@
         </section>
     </header>
     <main class="container">
-        <section class="cards">
-            <section class="card flex space-between">
-                <img class="card-image" src="img/main/1.jpg" />
-                <div class="card-content flex space-between">
-                    <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
-                    <div class="card-text">
-                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur...</p>
-                    </div>
-                    <button class="card-btn">Continue Reading</button>
-            </section>
-            <section class="card flex space-between">
-                <img class="card-image" src="img/main/2.jpg" />
-                <div class="card-content flex space-between">
-                    <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
-                    <div class="card-text">
-                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur...</p>
-                    </div>
-                    <button class="card-btn">Continue Reading</button>
-            </section>
-            <section class="card flex space-between">
-                <img class="card-image" src="img/main/3.jpg" />
-                <div class="card-content flex space-between">
-                    <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
-                    <div class="card-text">
-                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur...</p>
-                    </div>
-                    <button class="card-btn">Continue Reading</button>
-            </section>
-        </section>
+        <section class="cards"></section>
         <section class="page-nav flex space-between">
             <button class="page-nav-prev flex space-between align-center">
                 <img class="page-nav-img" src="img/pages/prev.png" />
@@ -92,12 +55,10 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        function toggleMenu() {
-            document.body.classList.toggle('open-menu');            
-        }
-    </script>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/controller.js"></script>
 </body>
 
 </html>
