@@ -14,14 +14,22 @@ function createCards() {
         gCards.push(createCard('img/main/1.jpg', defultTitle, defultTxt));
         gCards.push(createCard('img/main/2.jpg', defultTitle, defultTxt));
         gCards.push(createCard('img/main/3.jpg', defultTitle, defultTxt));
-        saveCardsToStorage();
     }
+    saveCardsToStorage();
 }
 
 function createCard(imgUrl, header, txt) {
     return {
         imgUrl, header, txt
     }
+}
+
+function addCard(imgUrl, header, txt) {
+    if (!imgUrl && !header && !txt) return;
+    if (!imgUrl) imgUrl = 'https://www.delightplus.co.th/img/tile-empty.png';
+    var card = createCard(imgUrl, header, txt);
+    gCards.unshift(card);
+    saveCardsToStorage();
 }
 
 function loadCardsFromStorage() {

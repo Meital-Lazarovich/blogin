@@ -39,6 +39,16 @@ button:focus {
     outline:0;
 }
 
+input {
+    margin-left: 1em;
+    padding: 0.3em;
+    outline-color: #58c93a;
+}
+
+input::placeholder {
+    color: #c3c1c1;
+}
+
 /*---Layout---*/
 
 .container {
@@ -96,7 +106,47 @@ header .logo:hover {
 main {
     border: 1px solid #e1e0e0;
     border-bottom: 0;
-    padding-top: 5rem;
+    padding-top: 3rem;
+}
+
+/*---add a new card---*/
+
+.add-card {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.add-card-modal {
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .8s ease-out;
+}
+
+.add-card-modal.shown {
+    height: 165px;
+    margin-top: 20px;
+}
+
+.add-new-card-btn, .add-card-btn {
+    transition: border .3s, color .3s;
+}
+
+.add-new-card-btn {
+    padding-right: 4em;
+    padding-left: 4em;
+    border: 2px solid #989797;
+    color: #989797;
+    font-size: 1.1em;
+}
+
+.add-card-btn {
+    margin-top: 10px;
 }
 
 /*---card---*/
@@ -133,23 +183,41 @@ main {
     margin-bottom: 0;
 }
 
-.card-btn {
-    border: 2px solid #c2c2c2;
+.card-image {
+    width: 48%;
+    object-fit: cover;
+    max-height: 307px;
+}
+
+.round-btn {
     background-color: #ffffff;
     border-radius: 1000px;
-    font-size: 1em;
-    padding: 0.75em 1.5em;
-    color: #c2c1c1;
     letter-spacing: 0.48px;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
     font-family: lato-bold, sans-serif;
     line-height: 1.25em;
+}
+
+.round-btn:hover {
+    border: 2px solid #58c93a;
+    color: #58c93a;
+    cursor: pointer;
+}
+
+.card-btn, .add-card-btn {
+    border: 2px solid #c2c2c2;
+    color: #c2c1c1;
+    font-size: 1em;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+}
+
+.card-btn {
     transition: padding .3s;
 }
 
 .card-btn:hover {
-    border: 2px solid #58c93a;
-    color: #58c93a;
-    cursor: pointer;
     padding-right: 3em;
 }
 
@@ -283,7 +351,6 @@ footer .logo {
 
     .card-image {
         width: 45%;
-        object-fit: cover;
     }
     
     .card-title {
@@ -376,7 +443,7 @@ footer .logo {
     }
 
     .card-content {
-        margin-left: 0;
+        width: 100%;
     }
 }
 

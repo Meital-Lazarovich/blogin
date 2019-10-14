@@ -24,6 +24,15 @@
         </section>
     </header>
     <main class="container">
+        <section class="add-card flex space-between">
+            <button class="add-new-card-btn round-btn" onclick="onAddNewCard()">Add a New Card</button>
+            <section class="add-card-modal">
+                <div>Card title: <input class="new-header" type="text" placeholder="Enter a short title"/></div>
+                <div>Card Text: <input class="new-txt" type="text" placeholder="Enter your card content"/></div>
+                <div>Image url: <input class="new-img" type="text" placeholder="Enter a link to the image"/></div>
+                <button class="add-card-btn round-btn" onclick="onAddCard()">Add Card</button>
+            </section>
+        </section>
         <section class="cards"></section>
         <section class="page-nav flex space-between">
             <button class="page-nav-prev flex space-between align-center">
